@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+name: Fusion
+package: xyz.mxue.fusion
+version: 0.0.1
+description: 轻量级、自托管的 RSS 聚合器和阅读器
+homepage: https://github.com/0x2E/fusion/
+author: "0x2E"
+application:
+  subdomain: fusion
+  background_task: false
+  multi_instance: true
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://fusion.xyz.mxue.fusion.lzcapp:8080/
+services:
+  fusion:
+    image: registry.lazycat.cloud/mxuexxmy/rook1e404/fusion:b19d5e3b738d15f5
+    environment:
+      - PASSWORD=rss123456
+    binds:
+      - /lzcapp/var/data:/data

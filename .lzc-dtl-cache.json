@@ -1,0 +1,32 @@
+{
+  "name": "Fusion",
+  "package": "xyz.mxue.fusion",
+  "description": "轻量级、自托管的 RSS 聚合器和阅读器",
+  "homepage": "https://github.com/0x2E/fusion/",
+  "author": "0x2E",
+  "app_features": [
+    "multi_instance"
+  ],
+  "subdomain": "fusion",
+  "version": "0.0.1",
+  "iconPath": "lzc-app-icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "fusion_127.0.0.1_8080": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_rook1e404_fusion_latest": {
+    "originalImage": "rook1e404/fusion:latest",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/rook1e404/fusion:b19d5e3b738d15f5",
+    "timestamp": "2025-03-13T14:49:02.694Z"
+  },
+  "fusion_volume_/data_action": "emptyDir",
+  "fusion_volume_/data_location": "app_data"
+}
